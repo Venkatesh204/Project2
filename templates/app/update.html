@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<center>
+<h2>UPDATE EMPLOYEE INFORMATION</h2>
+
+<form method="POST">
+
+	{% csrf_token %}
+
+Emp_Name :<input type="text" name="Emp_Name" value="{{e.Emp_Name}}"><br><br>
+
+Emp_ID:<input type="text" name="Emp_ID" value="{{e.Emp_ID}}"><br><br>  
+
+Emp_Designation:<input type="text" name="Emp_Designation" value="{{e.Emp_Designation}}"><br><br>
+
+Emp_Date_Of_Joining:<input type="text" name="Emp_Date_Of_Joining" value="{{e.Emp_Date_Of_Joining}}"><br><br> 
+
+Emp_Department:<input type="text" name="Emp_Department" value="{{e.Emp_Department}}"><br><br>
+
+Emp_Salary_Package:<input type="text" name="Emp_Salary_Package" value="{{e.Emp_Salary_Package}}"><br><br> 
+
+Emp_Experince:<input type="text" name="Emp_Experince" value="{{e.Emp_Experince}}"><br><br>
+
+<center><button>SAVE</button><br></center>
+
+</form>		
+
+
+
+
+
+
+	</center>
+
+</body>
+</html>

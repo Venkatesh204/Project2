@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+{% extends 'app/home.html' %}
+
+{% load static %}
+
+{% block body_block %}<br>
+
+<center><h3>LATEST NEWS</h3></center>
+<center>
+	<table border="4">
+	<thead>
+	<th>Occations</th><br>	
+</thead>
+
+<br>
+{%for i in n %}
+<tr>
+	<td>{{i.Occations}}</td>
+</tr>
+
+</center>
+
+{% endfor %}<br>
+
+
+</table>
+
+<a href="/holidays"><center><button>CALENDER HOLIDAYS</button></center></a>
+
+
+{% endblock %}
+
+	
+
+</body>
+</html>

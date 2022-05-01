@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<center>
+<body>
+{% extends 'app/home.html' %}
+{% load static %}
+{% block body_block %}
+
+<br>
+<h2>EMPLOYEE INFORMATION</h2>
+<table border='2px;'>
+<thead>
+	<th>Emp_Name</th>
+	<th>Emp_ID</th>
+	<th>Emp_Designation</th>
+	<th>Emp_Date_Of_Joining</th>
+	<th>Emp_Department</th>
+	<th>Emp_Salary_Package</th>
+	<th>Emp_Experince</th>
+	<th>HR_SECTIONS</th>
+	
+</thead>
+{%for i in e%}
+<tr>
+	<td>{{i.Emp_Name}}</td>
+	<td>{{i.Emp_ID}}</td>
+	<td>{{i.Emp_Designation}}</td>
+	<td>{{i.Emp_Date_Of_Joining}}</td>
+	<td>{{i.Emp_Department}}</td>
+	<td>{{i.Emp_Salary_Package}}</td>
+	<td>{{i.Emp_Experince}}</td>
+	<td><a href="/update/{{i.id}}"><button>UPDATE</button></a> <a href="/delete/{{ i.id }}"><button>DELETE</button></a> </td>
+	</tr>
+{% endfor %}
+</table>
+<a href="/employeeform"><button>ADD EMPLOYEE</button>
+</a>
+<a href="/hrmanager"><button>BACK TO  HR MANAGER SECTION</button></a>
+{% endblock %}
+</body>
+</center>
+</html>
